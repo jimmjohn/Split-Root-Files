@@ -14,5 +14,6 @@ void split()
     TString rootName = TString::Format("RPCv4t_evtraw-20181218_082256_%i.rre",ij);
     cout<<"Start="<<ij*splitLevel<<"\tEnd="<<(((ij+1)*splitLevel))-1<<endl;
     df.Range(ij*splitLevel, (((ij+1)*splitLevel))).Snapshot("evetree",std::string_view(rootName));
+    /*Its not deleting from the memory*/
   }
 }
